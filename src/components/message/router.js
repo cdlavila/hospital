@@ -1,9 +1,9 @@
-const router = require('express').Router()
-const Controller = require('../message/controller')
+const router = require('express').Router();
+const Controller = require('./controller');
 
-router.post('/', Controller.createMessage)
-router.get('/', Controller.getAllMessages)
-router.patch('/:id', Controller.updateMessage)
-router.delete('/:id', Controller.deleteMessage)
+router.post('/', Controller.createMessage);
+router.get('/', Controller.getAllMessages);
+router.patch('/:id', Controller.updateMessage);
+router.delete('/:id', Controller.deleteMessage);
 
-module.exports = router
+module.exports = router;

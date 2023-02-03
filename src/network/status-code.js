@@ -6,7 +6,7 @@ const statusCode = {
   NOT_AUTHORIZED: 401,
   PERMISSION_DENIED: 403,
   NOT_FOUND: 404,
-  SERVER_ERROR: 500
-}
+  SERVER_ERROR: 500,
+};
 
-module.exports = statusCode
+module.exports = statusCode;

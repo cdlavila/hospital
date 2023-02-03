@@ -1,7 +1,7 @@
-const router = require('express').Router()
-const Controller = require('../chat/controller')
+const router = require('express').Router();
+const Controller = require('./controller');
 
-router.post('/', Controller.createChat)
-router.get('/:userId', Controller.getAllChats)
+router.post('/', Controller.createChat);
+router.get('/:userId', Controller.getAllChats);
 
-module.exports = router
+module.exports = router;

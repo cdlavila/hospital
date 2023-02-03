@@ -1,19 +1,19 @@
-const Model = require('./model')
+const Model = require('./model');
 
 class Service {
-    static async createChat (users) {
-        const chat = {
-            users: users,
-        }
-        const createdChat = new Model(chat)
-        await createdChat.save()
-        return createdChat
-    }
+  static async createChat(users) {
+    const chat = {
+      users,
+    };
+    const createdChat = new Model(chat);
+    await createdChat.save();
+    return createdChat;
+  }
 
-    static async getAllChats (userId) {
-        const filter = !userId? {} : { users: userId }
-        return Model.find(filter).populate('users')
-    }
+  static async getAllChats(userId) {
+    const filter = !userId ? {} : { users: userId };
+    return Model.find(filter).populate('users');
+  }
 }
 
-module.exports = Service
+module.exports = Service;

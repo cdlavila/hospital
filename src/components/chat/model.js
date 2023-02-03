@@ -1,14 +1,14 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema
+const { Schema } = mongoose;
 
 const mySchema = new Schema({
-    users: [{
-        type: Schema.ObjectId,
-        ref: 'users',
-    }],
+  users: [{
+    type: Schema.ObjectId,
+    ref: 'users',
+  }],
 });
 
-const model = mongoose.model('chats', mySchema)
+const model = mongoose.model('chats', mySchema);
 
-module.exports = model
+module.exports = model;
