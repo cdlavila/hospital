@@ -1,14 +1,14 @@
 const router = require('express').Router();
-const messageRouter = require('../components/message/router');
+const doctorRouter = require('../components/doctor/router');
 const userRouter = require('../components/user/router');
-const chatRouter = require('../components/chat/router');
+const hospitalRouter = require('../components/hospital/router');
 
-router.use('/messages', messageRouter);
 router.use('/users', userRouter);
-router.use('/chats', chatRouter);
+router.use('/hospitals', hospitalRouter);
+router.use('/doctors', doctorRouter);
 
 router.get('/', (req, res) => {
-  res.send({ message: 'Welcome to the chat REST API' });
+  res.send({ message: 'Welcome to the hospitals GRAPHQL API' });
 });
 
 module.exports = router;

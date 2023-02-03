@@ -1,2 +1,2 @@
-# Hospital
-GraphQL API for hospital management
+# Hospitals
+GraphQL API for hospitals management

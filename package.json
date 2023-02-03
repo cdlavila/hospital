@@ -1,7 +1,7 @@
 {
-  "name": "hospital",
+  "name": "hospitals",
   "version": "1.0.0",
-  "description": "GraphQL API for hospital management",
+  "description": "GraphQL API for hospitals management",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cdlavila/hospital.git"
+    "url": "git+https://github.com/cdlavila/hospitals.git"
   },
   "keywords": [
     "hospital"
@@ -20,16 +20,15 @@
   "author": "Carlos Daniel Londoño Avila",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cdlavila/chat/issues"
+    "url": "https://github.com/cdlavila/hospitals/issues"
   },
-  "homepage": "https://github.com/cdlavila/chat#readme",
+  "homepage": "https://github.com/cdlavila/hospitals#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.9.0",
-    "nodemon": "^2.0.20",
-    "socket.io": "^4.5.4"
+    "nodemon": "^2.0.20"
   },
   "devDependencies": {
     "eslint": "^8.33.0",
