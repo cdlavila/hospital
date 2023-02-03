@@ -8,7 +8,7 @@ router.use('/hospitals', hospitalRouter);
 router.use('/doctors', doctorRouter);
 
 router.get('/', (req, res) => {
-  res.send({ message: 'Welcome to the hospitals GRAPHQL API' });
+  res.send({ message: 'Welcome to the hospitals REST API' });
 });
 
 module.exports = router;

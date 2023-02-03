@@ -1,14 +1,11 @@
 require('dotenv').config();
-
 const express = require('express');
-
-const app = express();
-const server = require('http').Server(app);
-
 const cors = require('cors');
 const database = require('./src/database');
 const apiRouter = require('./src/network/routes');
+const useGraphQL = require('./src/graphql');
 
+const app = express();
 const port = process.env.PORT || 3000;
 
 // To use JSON format in the request
@@ -31,6 +28,13 @@ app.get('/', (req, res) => (
   res.status(200).json({ message: 'Welcome to the chat server' })
 ));
 
-server.listen(port, () => {
+// Configure GraphQL
+useGraphQL(app).then(() => {
+  console.log('GraphQL configured successfully');
+});
+
+const server = app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
+
+module.exports = { app, server };
