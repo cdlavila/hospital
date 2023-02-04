@@ -14,6 +14,9 @@ class DoctorService {
 
   static async updateDoctor(id, data) {
     const foundDoctor = await DoctorModel.findById(id);
+    if (!foundDoctor) {
+      throw new Error('Doctor not found');
+    }
     const columns = Object.keys(data)
     columns.forEach(column => {
       foundDoctor[column] = data[column]
@@ -23,9 +26,12 @@ class DoctorService {
   }
 
   static async deleteDoctor(id) {
-    await DoctorModel.deleteOne({
+    const answer = await DoctorModel.deleteOne({
       _id: id,
     });
+    if (answer.deletedCount === 0) {
+      throw new Error('Doctor not found');
+    }
     return id;
   }
 }
