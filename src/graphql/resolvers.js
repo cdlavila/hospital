@@ -12,7 +12,20 @@ const resolvers = {
     // Hospitals
 
     // Doctors
-    allDoctors: DoctorResolver.getAllDoctors
+    allDoctors: DoctorResolver.getAllDoctors,
+  },
+
+  Mutation: {
+    hello: () => 'Hello world!',
+
+    // Users
+
+    // Hospitals
+
+    // Doctors
+    createDoctor: DoctorResolver.createDoctor,
+    updateDoctor: DoctorResolver.updateDoctor,
+    deleteDoctor: DoctorResolver.deleteDoctor,
   }
 }
 

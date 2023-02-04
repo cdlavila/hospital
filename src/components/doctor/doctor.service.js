@@ -23,9 +23,10 @@ class DoctorService {
   }
 
   static async deleteDoctor(id) {
-    return DoctorModel.deleteOne({
+    await DoctorModel.deleteOne({
       _id: id,
     });
+    return id;
   }
 }
 
