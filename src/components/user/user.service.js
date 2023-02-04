@@ -1,6 +1,6 @@
 const UserModel = require('./user.model');
 const bcrypt = require('bcrypt');
-const Token = require('../../helpers/token');
+const Token = require('../../token');
 
 class UserService {
   static async registerUser(user) {
