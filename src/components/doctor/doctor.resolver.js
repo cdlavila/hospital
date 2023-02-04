@@ -1,19 +1,19 @@
-const Model = require('./model');
+const DoctorModel = require('./doctor.model');
 
-class Service {
+class DoctorResolver {
   static async createDoctor(data) {
-    const createdDoctor = new Model(data);
+    const createdDoctor = new DoctorModel(data);
     await createdDoctor.save();
     return createdDoctor;
   }
 
   static async getAllDoctors(hospital) {
     const filter = !hospital ? {} : { hospital: hospital };
-    return Model.find(filter).populate('hospital');
+    return DoctorModel.find(filter).populate('hospital');
   }
 
   static async updateDoctor(id, data) {
-    const foundDoctor = await Model.findById(id);
+    const foundDoctor = await DoctorModel.findById(id);
     const columns = Object.keys(data)
     columns.forEach(column => {
       foundDoctor[column] = data[column]
@@ -23,10 +23,10 @@ class Service {
   }
 
   static async deleteDoctor(id) {
-    return Model.deleteOne({
+    return DoctorModel.deleteOne({
       _id: id,
     });
   }
 }
 
-module.exports = Service;
+module.exports = DoctorResolver;

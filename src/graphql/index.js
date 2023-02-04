@@ -4,11 +4,7 @@ const { expressMiddleware  } = require('@apollo/server/express4');
 const { loadFilesSync } = require('@graphql-tools/load-files');
 
 const typeDefs = loadFilesSync('./src/graphql/**/*.graphql');
-const resolvers = {
-  Query: {
-    hello: () => 'Hello world!',
-  }
-}
+const resolvers = require('./resolvers');
 
 const useGraphQL = async (app) => {
   const server = new ApolloServer({
