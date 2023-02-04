@@ -10,6 +10,7 @@ const resolvers = {
     // Users
 
     // Hospitals
+    allHospitals: HospitalResolver.getAllHospitals,
 
     // Doctors
     allDoctors: DoctorResolver.getAllDoctors,
@@ -21,6 +22,9 @@ const resolvers = {
     // Users
 
     // Hospitals
+    createHospital: HospitalResolver.createHospital,
+    updateHospital: HospitalResolver.updateHospital,
+    deleteHospital: HospitalResolver.deleteHospital,
 
     // Doctors
     createDoctor: DoctorResolver.createDoctor,

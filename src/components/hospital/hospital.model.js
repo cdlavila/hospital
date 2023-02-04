@@ -19,10 +19,6 @@ const mySchema = new Schema({
     type: String,
     required: true,
   },
-  foundationDate: {
-    type: Date,
-    required: true,
-  }
 });
 
 const model = mongoose.model('hospitals', mySchema);
