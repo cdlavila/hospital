@@ -7,8 +7,6 @@ const resolvers = {
   Query: {
     hello: () => 'Hello world!',
 
-    // Users
-
     // Hospitals
     allHospitals: HospitalResolver.getAllHospitals,
 
@@ -20,6 +18,9 @@ const resolvers = {
     hello: () => 'Hello world!',
 
     // Users
+    registerUser: UserResolver.registerUser,
+    loginUser: UserResolver.loginUser,
+    deleteUser: UserResolver.deleteUser,
 
     // Hospitals
     createHospital: HospitalResolver.createHospital,

@@ -3,8 +3,8 @@ extend type Query {
 }
 
 extend type Mutation {
-  createDoctor(doctor: createDoctorInput): Doctor
-  updateDoctor(id: String!, changes: updateDoctorInput): Doctor
+  createDoctor(doctor: CreateDoctorInput): Doctor
+  updateDoctor(id: String!, changes: UpdateDoctorInput): Doctor
   deleteDoctor(id: String!): String
 }
 
@@ -18,7 +18,7 @@ type Doctor {
   hospital: Hospital
 }
 
-input createDoctorInput {
+input CreateDoctorInput {
   firstName: String!
   lastName: String!
   email: String!
@@ -27,7 +27,7 @@ input createDoctorInput {
   hospital: String!
 }
 
-input updateDoctorInput {
+input UpdateDoctorInput {
   firstName: String
   lastName: String
   email: String

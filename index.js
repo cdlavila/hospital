@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const database = require('./src/database');
+const database = require('./src/database/connection');
 const useGraphQL = require('./src/graphql');
 
 const app = express();

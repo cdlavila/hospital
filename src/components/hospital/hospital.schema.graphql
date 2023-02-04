@@ -3,8 +3,8 @@ extend type Query {
 }
 
 extend type Mutation {
-  createHospital(hospital: createHospitalInput): Hospital
-  updateHospital(id: String!, changes: updateHospitalInput): Hospital
+  createHospital(hospital: CreateHospitalInput): Hospital
+  updateHospital(id: String!, changes: UpdateHospitalInput): Hospital
   deleteHospital(id: String!): String
 }
 
@@ -16,14 +16,14 @@ type Hospital {
   email: String
 }
 
-input createHospitalInput {
+input CreateHospitalInput {
   name: String!
   address: String!
   phone: String!
   email: String!
 }
 
-input updateHospitalInput {
+input UpdateHospitalInput {
   name: String
   address: String
   phone: String

@@ -1,0 +1,21 @@
+extend type Mutation {
+  registerUser(user: UserInput): User,
+  loginUser(credentials: UserInput): LoginResponse,
+  deleteUser(id: String!): String
+}
+
+type User {
+  id: String
+  username: String
+  password: String
+}
+
+input UserInput {
+  username: String!
+  password: String!
+}
+
+type LoginResponse {
+  user: User
+  token: String
+}
