@@ -1,15 +1,7 @@
-const HospitalModel = require('./hospital.model');
+const HospitalService = require('./hospital.service');
 
-class HospitalResolver {
-  static async createHospital(data) {
-    const createdHospital = new HospitalModel(data);
-    await createdHospital.save();
-    return createdHospital;
-  }
-
-  static async getAllHospitals() {
-    return HospitalModel.find();
-  }
+const HospitalResolver = {
+  //
 }
 
 module.exports = HospitalResolver;

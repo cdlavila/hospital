@@ -1,0 +1,12 @@
+extend type Query {
+  allDoctors(hospital: String): [Doctor]
+}
+
+type Doctor {
+  id: String
+  firstName: String
+  lastName: String
+  email: String
+  phone: String
+  specialty: String
+}
