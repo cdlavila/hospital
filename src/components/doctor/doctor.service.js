@@ -4,7 +4,8 @@ class DoctorService {
   static async createDoctor(data) {
     const createdDoctor = new DoctorModel(data);
     await createdDoctor.save();
-    return createdDoctor;
+    return DoctorModel.findById(createdDoctor._id)
+      .populate('hospital');
   }
 
   static async getAllDoctors(hospital) {

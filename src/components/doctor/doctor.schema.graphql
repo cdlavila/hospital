@@ -14,7 +14,8 @@ type Doctor {
   lastName: String
   email: String
   phone: String
-  speciality: String
+  speciality: String,
+  hospital: Hospital
 }
 
 input createDoctorInput {
@@ -23,6 +24,7 @@ input createDoctorInput {
   email: String!
   phone: String!
   speciality: String!
+  hospital: String!
 }
 
 input updateDoctorInput {
@@ -31,4 +33,5 @@ input updateDoctorInput {
   email: String
   phone: String
   speciality: String
+  hospital: String
 }
