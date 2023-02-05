@@ -1,0 +1,31 @@
+extend type Query {
+  allHospitals: [Hospital]
+}
+
+extend type Mutation {
+  createHospital(hospital: CreateHospitalInput): Hospital
+  updateHospital(id: String!, changes: UpdateHospitalInput): Hospital
+  deleteHospital(id: String!): String
+}
+
+type Hospital {
+  id: String
+  name: String
+  address: String
+  phone: String
+  email: String
+}
+
+input CreateHospitalInput {
+  name: String!
+  address: String!
+  phone: String!
+  email: String!
+}
+
+input UpdateHospitalInput {
+  name: String
+  address: String
+  phone: String
+  email: String
+}
