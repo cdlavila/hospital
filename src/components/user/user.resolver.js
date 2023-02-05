@@ -2,15 +2,15 @@ const UserService = require('./user.service');
 
 class UserResolver {
   static async registerUser(_, { user }) {
-    return await UserService.registerUser(user);
+    return UserService.registerUser(user);
   }
 
   static async loginUser(_, { credentials }) {
-    return await UserService.loginUser(credentials);
+    return UserService.loginUser(credentials);
   }
 
   static async deleteUser(_, { id }) {
-    return await UserService.deleteUser(id);
+    return UserService.deleteUser(id);
   }
 }
 

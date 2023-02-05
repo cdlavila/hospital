@@ -1,7 +1,6 @@
-const UserResolver = require('../components/user/user.resolver')
-const HospitalResolver = require('../components/hospital/hospital.resolver')
-const DoctorResolver = require('../components/doctor/doctor.resolver')
-
+const UserResolver = require('../components/user/user.resolver');
+const HospitalResolver = require('../components/hospital/hospital.resolver');
+const DoctorResolver = require('../components/doctor/doctor.resolver');
 
 const resolvers = {
   Query: {
@@ -31,7 +30,7 @@ const resolvers = {
     createDoctor: DoctorResolver.createDoctor,
     updateDoctor: DoctorResolver.updateDoctor,
     deleteDoctor: DoctorResolver.deleteDoctor,
-  }
-}
+  },
+};
 
-module.exports = resolvers
+module.exports = resolvers;

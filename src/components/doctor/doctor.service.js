@@ -4,12 +4,12 @@ class DoctorService {
   static async createDoctor(data) {
     const createdDoctor = new DoctorModel(data);
     await createdDoctor.save();
-    return DoctorModel.findById(createdDoctor._id)
+    return DoctorModel.findById(createdDoctor?.id)
       .populate('hospital');
   }
 
   static async getAllDoctors(hospital) {
-    const filter = !hospital ? {} : { hospital: hospital };
+    const filter = !hospital ? {} : { hospital };
     return DoctorModel.find(filter).populate('hospital');
   }
 
@@ -18,10 +18,10 @@ class DoctorService {
     if (!foundDoctor) {
       throw new Error('Doctor not found');
     }
-    const columns = Object.keys(data)
-    columns.forEach(column => {
-      foundDoctor[column] = data[column]
-    })
+    const columns = Object.keys(data);
+    columns.forEach((column) => {
+      foundDoctor[column] = data[column];
+    });
     await foundDoctor.save();
     return foundDoctor;
   }

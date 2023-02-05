@@ -2,19 +2,19 @@ const HospitalService = require('./hospital.service');
 
 class HospitalResolver {
   static async getAllHospitals() {
-    return await HospitalService.getAllHospitals();
+    return HospitalService.getAllHospitals();
   }
 
   static async createHospital(_, { hospital }) {
-    return await HospitalService.createHospital(hospital);
+    return HospitalService.createHospital(hospital);
   }
 
   static async updateHospital(_, { id, hospital }) {
-    return await HospitalService.updateHospital(id, hospital);
+    return HospitalService.updateHospital(id, hospital);
   }
 
   static async deleteHospital(_, { id }) {
-    return await HospitalService.deleteHospital(id);
+    return HospitalService.deleteHospital(id);
   }
 }
 

@@ -10,7 +10,7 @@ const schema = new Schema({
   password: {
     type: String,
     required: true,
-  }
+  },
 });
 
 const model = mongoose.model('users', schema);

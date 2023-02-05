@@ -16,10 +16,10 @@ class HospitalService {
     if (!foundHospital) {
       throw new Error('Hospital not found');
     }
-    const columns = Object.keys(data)
-    columns.forEach(column => {
-      foundHospital[column] = data[column]
-    })
+    const columns = Object.keys(data);
+    columns.forEach((column) => {
+      foundHospital[column] = data[column];
+    });
     await foundHospital.save();
     return foundHospital;
   }

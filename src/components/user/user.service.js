@@ -1,11 +1,13 @@
-const UserModel = require('./user.model');
 const bcrypt = require('bcrypt');
-const Token = require('../../token');
+const UserModel = require('./user.model');
+const TokenService = require('../../token.service');
 
 class UserService {
   static async registerUser(user) {
-    user.password = await bcrypt.hash(user.password, 10);
-    const createdUser = new UserModel(user);
+    const createdUser = new UserModel({
+      ...user,
+      password: await bcrypt.hash(user.password, 10),
+    });
     await createdUser.save();
     return createdUser;
   }
@@ -27,7 +29,7 @@ class UserService {
 
     return {
       user: foundUser,
-      token: Token.generate(foundUser?.id),
+      token: TokenService.generate(foundUser?.id),
     };
   }
 
