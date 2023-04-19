@@ -1,5 +1,5 @@
 # Hospitals
-GraphQL API for hospitals management system created with [Node.js](https://nodejs.org/en/), [Express.js](https://expressjs.com/), [GraphQL](https://graphql.org/), [Apollo Server](https://www.apollographql.com/docs/apollo-server/), [MongoDB](https://www.mongodb.com/) and [Mongoose ORM](https://mongoosejs.com/).
+GraphQL API for a hospitals management system created with [Node.js](https://nodejs.org/en/), [Express.js](https://expressjs.com/), [GraphQL](https://graphql.org/), [Apollo Server](https://www.apollographql.com/docs/apollo-server/), [MongoDB](https://www.mongodb.com/) and [Mongoose ORM](https://mongoosejs.com/).
 
 ## Installation
 To install the project, we need to have installed the next:
